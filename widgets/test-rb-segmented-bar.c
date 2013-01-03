@@ -26,7 +26,7 @@
  */
 
 /* compile with:
- gcc -o test-rb-segmented-bar -I. $(pkg-config --cflags --libs gtk+-2.0)
+ gcc -o test-rb-segmented-bar -I. $(pkg-config --cflags --libs gtk+-3.0)
     ./rb-segmented-bar.c ./test-rb-segmented-bar.c
  */
 #include <gtk/gtk.h>

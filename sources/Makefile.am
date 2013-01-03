@@ -50,7 +50,7 @@ libsources_la_SOURCES = 		\
 	rb-transfer-target.c		\
 	$(NULL)
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
 	-DG_LOG_DOMAIN=\"Rhythmbox\"		 	\
 	-I$(top_srcdir) 				\

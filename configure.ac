@@ -361,12 +361,12 @@ CFLAGS="$CFLAGS $X_CFLAGS"
 
 dnl Multimedia keys
 have_xfree=no
-AC_COMPILE_IFELSE([
+AC_COMPILE_IFELSE([AC_LANG_SOURCE([
 	#include <X11/XF86keysym.h>
 int main(int argc,char **argv) {
   return 0;
 }
-], have_xfree=yes)
+])], have_xfree=yes)
 AC_MSG_CHECKING(for XFree86 headers)
 AC_MSG_RESULT($have_xfree)
 if test x"$have_xfree" = "xyes" ; then
@@ -522,7 +522,8 @@ if test "$GCC" = "yes" -a "$set_more_warnings" != "no"; then
 	-Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
 	-Wnested-externs -Wpointer-arith \
 	-Wcast-align -Wformat-security -Wall \
-	-Werror -Wno-deprecated-declarations -std=gnu89"
+	-Werror -Wno-deprecated-declarations \
+    -Wno-unused-local-typedefs -std=gnu89"
 
 	if echo "$CFLAGS" | grep -q -- '-O' && echo "$CFLAGS" | grep -q -v -- '-O0'; then
 		WARN_CFLAGS="-Wuninitialized $WARN_CFLAGS"

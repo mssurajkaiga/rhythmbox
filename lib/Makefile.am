@@ -43,7 +43,7 @@ librb_la_SOURCES =					\
 	rb-chunk-loader.c				\
 	rb-chunk-loader.h
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
 	-DG_LOG_DOMAIN=\"Rhythmbox\"		 	\
 	-DSHARE_DIR=\"$(pkgdatadir)\"			\

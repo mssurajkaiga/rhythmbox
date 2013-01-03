@@ -52,7 +52,7 @@ librbwidgets_la_SOURCES =				\
 	rb-object-property-editor.c			\
 	rb-import-dialog.c
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
 	-DG_LOG_DOMAIN=\"Rhythmbox\"		 	\
 	-I$(top_srcdir) 				\
